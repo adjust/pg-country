@@ -1,0 +1,25 @@
+GIT
+  remote: git@github.com:adjust/dumbo.git
+  revision: ef139ceb1874bb5869902f8280dda2ef7a64c86d
+  branch: version-1.0.0
+  specs:
+    dumbo (1.0.0)
+      erubis (~> 2.7)
+      pg (~> 0.19)
+      thor (~> 0.19)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    erubis (2.7.0)
+    pg (0.19.0)
+    thor (0.19.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dumbo!
+
+BUNDLED WITH
+   1.11.1

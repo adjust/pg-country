@@ -1,5 +1,5 @@
-        # country extension
-        comment = 'my awesome extension'
-        default_version = '0.0.1'
-        relocatable = true
-        requires = ''
+# country extension
+comment = '1 byte ISO ALPHA-2 country extension'
+default_version = '1.0.0'
+relocatable = true
+requires = ''

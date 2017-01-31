@@ -1,6 +1,4 @@
 BEGIN;
--- country should be case insensitive;
--- ./spec/country_insensitive_spec.rb:8;
 CREATE EXTENSION country;
 SELECT 'de'::country = 'de'::country;
 SELECT 'de'::country = 'De'::country;

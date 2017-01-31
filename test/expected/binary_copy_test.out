@@ -1,6 +1,4 @@
 BEGIN;
--- binary_copy should copy data binary from country;
--- ./spec/binary_copy_spec.rb:8;
 CREATE EXTENSION country;
 CREATE TABLE before (a country);
 INSERT INTO before values ('de'),('us'),('es'),('de'),('zz');

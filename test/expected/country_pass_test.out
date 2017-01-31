@@ -1,6 +1,4 @@
 BEGIN;
--- country_pass should pass valid countries;
--- ./spec/country_pass_spec.rb:34;
 CREATE EXTENSION country;
 SELECT 'ad'::country;
  country 
@@ -1510,8 +1508,6 @@ SELECT 'zz'::country;
 
 ROLLBACK;
 BEGIN;
--- country_pass should throw an error for invalid countries;
--- ./spec/country_pass_spec.rb:40;
 CREATE EXTENSION country;
 SELECT 'a'::country;
 ERROR:  invalid country input string a
@@ -1519,8 +1515,6 @@ LINE 1: SELECT 'a'::country;
                ^
 ROLLBACK;
 BEGIN;
--- country_pass should throw an error for invalid countries;
--- ./spec/country_pass_spec.rb:44;
 CREATE EXTENSION country;
 SELECT 'aa'::country;
 ERROR:  invalid country input string aa
@@ -1528,8 +1522,6 @@ LINE 1: SELECT 'aa'::country;
                ^
 ROLLBACK;
 BEGIN;
--- country_pass should throw an error for invalid countries;
--- ./spec/country_pass_spec.rb:48;
 CREATE EXTENSION country;
 SELECT 'aaa'::country;
 ERROR:  invalid country input string aaa

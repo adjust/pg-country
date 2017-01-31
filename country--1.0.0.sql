@@ -1,3 +1,6 @@
+-- complain if script is sourced in psql, rather than via CREATE EXTENSION
+\echo Use "CREATE EXTENSION country" to load this file. \quit
+--source file sql/country.sql
 CREATE FUNCTION country_in(cstring)
 RETURNS country
 AS '$libdir/country'
@@ -137,3 +140,4 @@ CREATE OPERATOR CLASS hash_country_ops
         OPERATOR        1       = ,
         FUNCTION        1       hash_country(country);
 
+ 
