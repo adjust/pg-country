@@ -1,3 +1,6 @@
+-- complain if script is sourced in psql, rather than via CREATE EXTENSION
+\echo Use "CREATE EXTENSION country" to load this file. \quit
+--source file sql/country.sql
 CREATE FUNCTION country_in(cstring)
 RETURNS country
 AS '$libdir/country'
@@ -29,28 +32,28 @@ CREATE TYPE country (
 COMMENT ON TYPE country IS 'a country internaly stored as int8';
 
 CREATE FUNCTION country_eq(country, country)
-RETURNS boolean LANGUAGE internal IMMUTABLE STRICT AS 'chareq';
+RETURNS boolean LANGUAGE internal IMMUTABLE AS 'chareq';
 
 CREATE FUNCTION country_ne(country, country)
-RETURNS boolean LANGUAGE internal IMMUTABLE STRICT AS 'charne';
+RETURNS boolean LANGUAGE internal IMMUTABLE AS 'charne';
 
 CREATE FUNCTION country_lt(country, country)
-RETURNS boolean LANGUAGE internal IMMUTABLE STRICT AS 'charlt';
+RETURNS boolean LANGUAGE internal IMMUTABLE AS 'charlt';
 
 CREATE FUNCTION country_le(country, country)
-RETURNS boolean LANGUAGE internal IMMUTABLE STRICT AS 'charle';
+RETURNS boolean LANGUAGE internal IMMUTABLE AS 'charle';
 
 CREATE FUNCTION country_gt(country, country)
-RETURNS boolean LANGUAGE internal IMMUTABLE STRICT AS 'chargt';
+RETURNS boolean LANGUAGE internal IMMUTABLE AS 'chargt';
 
 CREATE FUNCTION country_ge(country, country)
-RETURNS boolean LANGUAGE internal IMMUTABLE STRICT AS 'charge';
+RETURNS boolean LANGUAGE internal IMMUTABLE AS 'charge';
 
 CREATE FUNCTION country_cmp(country, country)
-RETURNS integer LANGUAGE internal IMMUTABLE STRICT AS 'btcharcmp';
+RETURNS integer LANGUAGE internal IMMUTABLE AS 'btcharcmp';
 
 CREATE FUNCTION hash_country(country)
-RETURNS integer LANGUAGE internal IMMUTABLE STRICT AS 'hashchar';
+RETURNS integer LANGUAGE internal IMMUTABLE AS 'hashchar';
 
 CREATE OPERATOR = (
 	LEFTARG = country,
@@ -80,7 +83,7 @@ CREATE OPERATOR < (
 	PROCEDURE = country_lt,
 	COMMUTATOR = > ,
 	NEGATOR = >= ,
- 	RESTRICT = scalarltsel,
+   	RESTRICT = scalarltsel,
 	JOIN = scalarltjoinsel
 );
 COMMENT ON OPERATOR <(country, country) IS 'less-than';
@@ -91,7 +94,7 @@ CREATE OPERATOR <= (
 	PROCEDURE = country_le,
 	COMMUTATOR = >= ,
 	NEGATOR = > ,
-  RESTRICT = scalarltsel,
+   	RESTRICT = scalarltsel,
 	JOIN = scalarltjoinsel
 );
 COMMENT ON OPERATOR <=(country, country) IS 'less-than-or-equal';
@@ -102,7 +105,7 @@ CREATE OPERATOR > (
 	PROCEDURE = country_gt,
 	COMMUTATOR = < ,
 	NEGATOR = <= ,
-  RESTRICT = scalargtsel,
+   	RESTRICT = scalargtsel,
 	JOIN = scalargtjoinsel
 );
 COMMENT ON OPERATOR >(country, country) IS 'greater-than';
@@ -113,7 +116,7 @@ CREATE OPERATOR >= (
 	PROCEDURE = country_ge,
 	COMMUTATOR = <= ,
 	NEGATOR = < ,
-  RESTRICT = scalargtsel,
+   	RESTRICT = scalargtsel,
 	JOIN = scalargtjoinsel
 );
 COMMENT ON OPERATOR >=(country, country) IS 'greater-than-or-equal';
@@ -121,15 +124,15 @@ COMMENT ON OPERATOR >=(country, country) IS 'greater-than-or-equal';
 CREATE OPERATOR CLASS btree_country_ops
 DEFAULT FOR TYPE country USING btree
 AS
-  OPERATOR        1       <  ,
-  OPERATOR        2       <= ,
-  OPERATOR        3       =  ,
-  OPERATOR        4       >= ,
-  OPERATOR        5       >  ,
-  FUNCTION        1       country_cmp(country, country);
+        OPERATOR        1       <  ,
+        OPERATOR        2       <= ,
+        OPERATOR        3       =  ,
+        OPERATOR        4       >= ,
+        OPERATOR        5       >  ,
+        FUNCTION        1       country_cmp(country, country);
 
 CREATE OPERATOR CLASS hash_country_ops
-DEFAULT FOR TYPE country USING hash
-AS
-  OPERATOR        1       = ,
-  FUNCTION        1       hash_country(country);
+    DEFAULT FOR TYPE country USING hash AS
+        OPERATOR        1       = ,
+        FUNCTION        1       hash_country(country);
+ 
