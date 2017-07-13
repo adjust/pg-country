@@ -2,6 +2,7 @@ BEGIN;
 -- country_pass should pass valid countries;
 -- ./spec/country_pass_spec.rb:34;
 CREATE EXTENSION country;
+SELECT NULL::country;
 SELECT 'ad'::country;
 SELECT 'ae'::country;
 SELECT 'af'::country;

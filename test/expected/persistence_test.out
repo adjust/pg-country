@@ -3,17 +3,20 @@ BEGIN;
 -- ./spec/persistence_spec.rb:8;
 CREATE EXTENSION country;
 CREATE TABLE country_test AS SELECT 'de'::country, 1 as num;
+INSERT INTO country_test(num) VALUES(3);
 SELECT * FROM country_test;
  country | num 
 ---------+-----
  de      |   1
-(1 row)
+         |   3
+(2 rows)
 
 UPDATE country_test SET num = 2;
 SELECT * FROM country_test;
  country | num 
 ---------+-----
  de      |   2
-(1 row)
+         |   2
+(2 rows)
 
 ROLLBACK;

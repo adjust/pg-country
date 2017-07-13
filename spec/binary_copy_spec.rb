@@ -7,7 +7,7 @@ describe 'binary_copy' do
 
   it "should copy data binary from country" do
     query("CREATE TABLE before (a country)")
-    query("INSERT INTO before values ('de'),('us'),('es'),('de'),('zz')")
+    query("INSERT INTO before values ('de'),('us'),('es'),(NULL),('de'),('zz')")
     query("CREATE TABLE after (a country)")
     query("COPY before TO '/tmp/tst' WITH (FORMAT binary)")
     query("COPY after FROM '/tmp/tst' WITH (FORMAT binary)")
@@ -15,6 +15,7 @@ describe 'binary_copy' do
       ['de'],
       ['us'],
       ['es'],
+      [nil],
       ['de'],
       ['zz']
   end
