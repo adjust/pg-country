@@ -17,7 +17,7 @@
      "version": "1.0.0",
      "url": "http://pgxn.org/meta/spec.txt"
    },
-   "description": "There are times you want a boolean value for a primary key but you want NULL/Unknown to be a single, distinct value.  The ajbool extension does this by marking unknown as a not null state for the purpose of this data type (but casts to bool as a true null).",
+   "description": "This extnesion effectively provides a country list as an enumerable one-byte integer, ideal for analytics workloads.  The country list will be updated as needed.",
    "prereqs": {
       "runtime": {
         "requires": {
