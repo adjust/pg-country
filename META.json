@@ -7,8 +7,7 @@
       "PostgreSQL": "http://www.postgresql.org/about/licence"
    },
    "provides": { 
-      "ajbool": {
-         "file": "sql/ajbool.sql",
+      "country": {
          "version": "0.0.2",
          "abstract": "Enumerable country list, stored in a single-byte, fixed-length type."
       }
