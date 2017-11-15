@@ -8,8 +8,6 @@ BEGIN
 	EXECUTE $E$ ALTER FUNCTION country_out(country) PARALLEL SAFE $E$;
 	EXECUTE $E$ ALTER FUNCTION country_recv(internal) PARALLEL SAFE $E$;
 	EXECUTE $E$ ALTER FUNCTION country_send(country) PARALLEL SAFE $E$;
-	EXECUTE $E$ ALTER FUNCTION country(text) PARALLEL SAFE $E$;
-	EXECUTE $E$ ALTER FUNCTION text(country) PARALLEL SAFE $E$;
 	EXECUTE $E$ ALTER FUNCTION country_eq(country, country) PARALLEL SAFE $E$;
 	EXECUTE $E$ ALTER FUNCTION country_ne(country, country) PARALLEL SAFE $E$;
 	EXECUTE $E$ ALTER FUNCTION country_lt(country, country) PARALLEL SAFE $E$;
