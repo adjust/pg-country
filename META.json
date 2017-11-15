@@ -1,14 +1,15 @@
 {
    "name": "country",
    "abstract": "Enumerable country list, stored in a single-byte, fixed-length type.",
-   "version": "0.0.2",
-   "maintainer": [ "Chris Travers <christravers@adjust.com>", "Manuel Kniep <rapimo@adjust.com>" ],
+   "version": "0.0.3",
+   "maintainer": [ "Chris Travers <chris.travers@adjust.com>", "Manuel Kniep <rapimo@adjust.com>" ],
    "license": {
       "PostgreSQL": "http://www.postgresql.org/about/licence"
    },
    "provides": { 
       "country": {
-         "version": "0.0.2",
+         "file": "sql/country.sql",
+         "version": "0.0.3",
          "abstract": "Enumerable country list, stored in a single-byte, fixed-length type."
       }
    },
