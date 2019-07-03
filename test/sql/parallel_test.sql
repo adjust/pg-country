@@ -2,7 +2,6 @@ BEGIN;
 create extension country;
 SET max_parallel_workers_per_gather=4;
 SET force_parallel_mode=on;
-SET enable_gathermerge=off;
 
 CREATE TABLE parallel_test(i int, c country) WITH (parallel_workers = 4);
 INSERT INTO parallel_test (i, c)
