@@ -23,8 +23,9 @@ SELECT COUNT(*) FROM parallel_test WHERE  c = 'us';;
          ->  Partial Aggregate
                Output: PARTIAL count(*)
                ->  Parallel Seq Scan on public.parallel_test
+                     Output: i, c
                      Filter: (parallel_test.c = 'us'::country)
-(9 rows)
+(10 rows)
 
 EXPLAIN (costs off, verbose)
 SELECT c, COUNT(*) FROM parallel_test GROUP BY 1;
@@ -43,7 +44,7 @@ SELECT c, COUNT(*) FROM parallel_test GROUP BY 1;
                      Output: c, PARTIAL count(*)
                      Group Key: parallel_test.c
                      ->  Parallel Seq Scan on public.parallel_test
-                           Output: c
+                           Output: i, c
 (14 rows)
 
 ROLLBACK;
