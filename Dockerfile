@@ -1,3 +1,4 @@
+ARG PG_VERSION
 FROM postgres:${PG_VERSION}-alpine
 
 # Environment

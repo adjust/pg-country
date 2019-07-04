@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 set -ux
-status=0
 
 # global exports
 export PGPORT=55435
@@ -12,24 +11,18 @@ make install
 # initialize database
 initdb -D $PGDATA
 
-# change PG's config
-echo "port = $PGPORT" >> $PGDATA/postgresql.conf
-
 # start cluster
-pg_ctl start -l /tmp/postgres.log -w || status=$?
+pg_ctl start -l /tmp/postgres.log -w -o "-p $PGPORT"
 
 # something's wrong, exit now!
-if [ $status -ne 0 ]; then cat /tmp/postgres.log; exit 1; fi
+[[ $? -ne 0 ]] && cat /tmp/postgres.log && exit 1;
 
 # run regression tests
 export PG_REGRESS_DIFF_OPTS="-w -U3" # for alpine's diff (BusyBox)
-make installcheck || status=$?
+make installcheck
 
-# show diff if it exists
-if [ -f regression.diffs ]; then cat regression.diffs; fi
-
-# something's wrong, exit now!
-if [ $status -ne 0 ]; then exit 1; fi
+# show diff if needed and exit if something's wrong
+[[ $? -ne 0 ]] && { [[ -f regression.diffs ]] && cat regression.diffs ; exit 1 ; }
 
 set +ux
 

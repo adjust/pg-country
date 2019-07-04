@@ -5,8 +5,7 @@ language: c
 services: docker
 
 install:
-    - sed -e 's/${PG_VERSION}/'${PG_VERSION}/g Dockerfile.template > Dockerfile
-    - docker build . -t tests
+    - docker build . -t tests --build-arg PG_VERSION=${PG_VERSION}
 
 script:
     - docker run tests
