@@ -1,0 +1,1515 @@
+BEGIN;
+CREATE EXTENSION country;
+SELECT country_name( NULL);
+ country_name 
+--------------
+ 
+(1 row)
+
+SELECT country_name('ad');
+ country_name 
+--------------
+ Andorra
+(1 row)
+
+SELECT country_name('ae');
+     country_name     
+----------------------
+ United Arab Emirates
+(1 row)
+
+SELECT country_name('af');
+ country_name 
+--------------
+ Afghanistan
+(1 row)
+
+SELECT country_name('ag');
+    country_name     
+---------------------
+ Antigua and Barbuda
+(1 row)
+
+SELECT country_name('ai');
+ country_name 
+--------------
+ Anguilla
+(1 row)
+
+SELECT country_name('al');
+ country_name 
+--------------
+ Albania
+(1 row)
+
+SELECT country_name('am');
+ country_name 
+--------------
+ Armenia
+(1 row)
+
+SELECT country_name('ao');
+ country_name 
+--------------
+ Angola
+(1 row)
+
+SELECT country_name('aq');
+ country_name 
+--------------
+ Antarctica
+(1 row)
+
+SELECT country_name('ar');
+ country_name 
+--------------
+ Argentina
+(1 row)
+
+SELECT country_name('as');
+  country_name  
+----------------
+ American Samoa
+(1 row)
+
+SELECT country_name('at');
+ country_name 
+--------------
+ Austria
+(1 row)
+
+SELECT country_name('au');
+ country_name 
+--------------
+ Australia
+(1 row)
+
+SELECT country_name('aw');
+ country_name 
+--------------
+ Aruba
+(1 row)
+
+SELECT country_name('ax');
+ country_name  
+---------------
+ Åland Islands
+(1 row)
+
+SELECT country_name('az');
+ country_name 
+--------------
+ Azerbaijan
+(1 row)
+
+SELECT country_name('ba');
+      country_name      
+------------------------
+ Bosnia and Herzegovina
+(1 row)
+
+SELECT country_name('bb');
+ country_name 
+--------------
+ Barbados
+(1 row)
+
+SELECT country_name('bd');
+ country_name 
+--------------
+ Bangladesh
+(1 row)
+
+SELECT country_name('be');
+ country_name 
+--------------
+ Belgium
+(1 row)
+
+SELECT country_name('bf');
+ country_name 
+--------------
+ Burkina Faso
+(1 row)
+
+SELECT country_name('bg');
+ country_name 
+--------------
+ Bulgaria
+(1 row)
+
+SELECT country_name('bh');
+ country_name 
+--------------
+ Bahrain
+(1 row)
+
+SELECT country_name('bi');
+ country_name 
+--------------
+ Burundi
+(1 row)
+
+SELECT country_name('bj');
+ country_name 
+--------------
+ Benin
+(1 row)
+
+SELECT country_name('bl');
+   country_name   
+------------------
+ Saint Barthélemy
+(1 row)
+
+SELECT country_name('bm');
+ country_name 
+--------------
+ Bermuda
+(1 row)
+
+SELECT country_name('bn');
+   country_name    
+-------------------
+ Brunei Darussalam
+(1 row)
+
+SELECT country_name('bo');
+           country_name           
+----------------------------------
+ Bolivia (Plurinational State of)
+(1 row)
+
+SELECT country_name('bq');
+           country_name           
+----------------------------------
+ Bonaire, Sint Eustatius and Saba
+(1 row)
+
+SELECT country_name('br');
+ country_name 
+--------------
+ Brazil
+(1 row)
+
+SELECT country_name('bs');
+ country_name 
+--------------
+ Bahamas
+(1 row)
+
+SELECT country_name('bt');
+ country_name 
+--------------
+ Bhutan
+(1 row)
+
+SELECT country_name('bv');
+ country_name  
+---------------
+ Bouvet Island
+(1 row)
+
+SELECT country_name('bw');
+ country_name 
+--------------
+ Botswana
+(1 row)
+
+SELECT country_name('by');
+ country_name 
+--------------
+ Belarus
+(1 row)
+
+SELECT country_name('bz');
+ country_name 
+--------------
+ Belize
+(1 row)
+
+SELECT country_name('ca');
+ country_name 
+--------------
+ Canada
+(1 row)
+
+SELECT country_name('cc');
+      country_name       
+-------------------------
+ Cocos (Keeling) Islands
+(1 row)
+
+SELECT country_name('cd');
+              country_name              
+----------------------------------------
+ Congo (the Democratic Republic of the)
+(1 row)
+
+SELECT country_name('cf');
+       country_name       
+--------------------------
+ Central African Republic
+(1 row)
+
+SELECT country_name('cg');
+ country_name 
+--------------
+ Congo
+(1 row)
+
+SELECT country_name('ch');
+ country_name 
+--------------
+ Switzerland
+(1 row)
+
+SELECT country_name('ci');
+ country_name  
+---------------
+ Côte d'Ivoire
+(1 row)
+
+SELECT country_name('ck');
+ country_name 
+--------------
+ Cook Islands
+(1 row)
+
+SELECT country_name('cl');
+ country_name 
+--------------
+ Chile
+(1 row)
+
+SELECT country_name('cm');
+ country_name 
+--------------
+ Cameroon
+(1 row)
+
+SELECT country_name('cn');
+ country_name 
+--------------
+ China
+(1 row)
+
+SELECT country_name('co');
+ country_name 
+--------------
+ Colombia
+(1 row)
+
+SELECT country_name('cr');
+ country_name 
+--------------
+ Costa Rica
+(1 row)
+
+SELECT country_name('cu');
+ country_name 
+--------------
+ Cuba
+(1 row)
+
+SELECT country_name('cv');
+ country_name 
+--------------
+ Cabo Verde
+(1 row)
+
+SELECT country_name('cw');
+ country_name 
+--------------
+ Curaçao
+(1 row)
+
+SELECT country_name('cx');
+   country_name   
+------------------
+ Christmas Island
+(1 row)
+
+SELECT country_name('cy');
+ country_name 
+--------------
+ Cyprus
+(1 row)
+
+SELECT country_name('cz');
+ country_name 
+--------------
+ Czechia
+(1 row)
+
+SELECT country_name('de');
+ country_name 
+--------------
+ Germany
+(1 row)
+
+SELECT country_name('dj');
+ country_name 
+--------------
+ Djibouti
+(1 row)
+
+SELECT country_name('dk');
+ country_name 
+--------------
+ Denmark
+(1 row)
+
+SELECT country_name('dm');
+ country_name 
+--------------
+ Dominica
+(1 row)
+
+SELECT country_name('do');
+    country_name    
+--------------------
+ Dominican Republic
+(1 row)
+
+SELECT country_name('dz');
+ country_name 
+--------------
+ Algeria
+(1 row)
+
+SELECT country_name('ec');
+ country_name 
+--------------
+ Ecuador
+(1 row)
+
+SELECT country_name('ee');
+ country_name 
+--------------
+ Estonia
+(1 row)
+
+SELECT country_name('eg');
+ country_name 
+--------------
+ Egypt
+(1 row)
+
+SELECT country_name('eh');
+  country_name  
+----------------
+ Western Sahara
+(1 row)
+
+SELECT country_name('er');
+ country_name 
+--------------
+ Eritrea
+(1 row)
+
+SELECT country_name('es');
+ country_name 
+--------------
+ Spain
+(1 row)
+
+SELECT country_name('et');
+ country_name 
+--------------
+ Ethiopia
+(1 row)
+
+SELECT country_name('fi');
+ country_name 
+--------------
+ Finland
+(1 row)
+
+SELECT country_name('fj');
+ country_name 
+--------------
+ Fiji
+(1 row)
+
+SELECT country_name('fk');
+           country_name            
+-----------------------------------
+ Falkland Islands (the) [Malvinas]
+(1 row)
+
+SELECT country_name('fm');
+           country_name           
+----------------------------------
+ Micronesia (Federated States of)
+(1 row)
+
+SELECT country_name('fo');
+ country_name  
+---------------
+ Faroe Islands
+(1 row)
+
+SELECT country_name('fr');
+ country_name 
+--------------
+ France
+(1 row)
+
+SELECT country_name('ga');
+ country_name 
+--------------
+ Gabon
+(1 row)
+
+SELECT country_name('gb');
+                     country_name                     
+------------------------------------------------------
+ United Kingdom of Great Britain and Northern Ireland
+(1 row)
+
+SELECT country_name('gd');
+ country_name 
+--------------
+ Grenada
+(1 row)
+
+SELECT country_name('ge');
+ country_name 
+--------------
+ Georgia
+(1 row)
+
+SELECT country_name('gf');
+ country_name  
+---------------
+ French Guiana
+(1 row)
+
+SELECT country_name('gg');
+ country_name 
+--------------
+ Guernsey
+(1 row)
+
+SELECT country_name('gh');
+ country_name 
+--------------
+ Ghana
+(1 row)
+
+SELECT country_name('gi');
+ country_name 
+--------------
+ Gibraltar
+(1 row)
+
+SELECT country_name('gl');
+ country_name 
+--------------
+ Greenland
+(1 row)
+
+SELECT country_name('gm');
+ country_name 
+--------------
+ Gambia
+(1 row)
+
+SELECT country_name('gn');
+ country_name 
+--------------
+ Guinea
+(1 row)
+
+SELECT country_name('gp');
+ country_name 
+--------------
+ Guadeloupe
+(1 row)
+
+SELECT country_name('gq');
+   country_name    
+-------------------
+ Equatorial Guinea
+(1 row)
+
+SELECT country_name('gr');
+ country_name 
+--------------
+ Greece
+(1 row)
+
+SELECT country_name('gs');
+                 country_name                 
+----------------------------------------------
+ South Georgia and the South Sandwich Islands
+(1 row)
+
+SELECT country_name('gt');
+ country_name 
+--------------
+ Guatemala
+(1 row)
+
+SELECT country_name('gu');
+ country_name 
+--------------
+ Guam
+(1 row)
+
+SELECT country_name('gw');
+ country_name  
+---------------
+ Guinea-Bissau
+(1 row)
+
+SELECT country_name('gy');
+ country_name 
+--------------
+ Guyana
+(1 row)
+
+SELECT country_name('hk');
+ country_name 
+--------------
+ Hong Kong
+(1 row)
+
+SELECT country_name('hm');
+           country_name            
+-----------------------------------
+ Heard Island and McDonald Islands
+(1 row)
+
+SELECT country_name('hn');
+ country_name 
+--------------
+ Honduras
+(1 row)
+
+SELECT country_name('hr');
+ country_name 
+--------------
+ Croatia
+(1 row)
+
+SELECT country_name('ht');
+ country_name 
+--------------
+ Haiti
+(1 row)
+
+SELECT country_name('hu');
+ country_name 
+--------------
+ Hungary
+(1 row)
+
+SELECT country_name('id');
+ country_name 
+--------------
+ Indonesia
+(1 row)
+
+SELECT country_name('ie');
+ country_name 
+--------------
+ Ireland
+(1 row)
+
+SELECT country_name('il');
+ country_name 
+--------------
+ Israel
+(1 row)
+
+SELECT country_name('im');
+ country_name 
+--------------
+ Isle of Man
+(1 row)
+
+SELECT country_name('in');
+ country_name 
+--------------
+ India
+(1 row)
+
+SELECT country_name('io');
+          country_name          
+--------------------------------
+ British Indian Ocean Territory
+(1 row)
+
+SELECT country_name('iq');
+ country_name 
+--------------
+ Iraq
+(1 row)
+
+SELECT country_name('ir');
+        country_name        
+----------------------------
+ Iran (Islamic Republic of)
+(1 row)
+
+SELECT country_name('is');
+ country_name 
+--------------
+ Iceland
+(1 row)
+
+SELECT country_name('it');
+ country_name 
+--------------
+ Italy
+(1 row)
+
+SELECT country_name('je');
+ country_name 
+--------------
+ Jersey
+(1 row)
+
+SELECT country_name('jm');
+ country_name 
+--------------
+ Jamaica
+(1 row)
+
+SELECT country_name('jo');
+ country_name 
+--------------
+ Jordan
+(1 row)
+
+SELECT country_name('jp');
+ country_name 
+--------------
+ Japan
+(1 row)
+
+SELECT country_name('ke');
+ country_name 
+--------------
+ Kenya
+(1 row)
+
+SELECT country_name('kg');
+ country_name 
+--------------
+ Kyrgyzstan
+(1 row)
+
+SELECT country_name('kh');
+ country_name 
+--------------
+ Cambodia
+(1 row)
+
+SELECT country_name('ki');
+ country_name 
+--------------
+ Kiribati
+(1 row)
+
+SELECT country_name('km');
+ country_name 
+--------------
+ Comoros
+(1 row)
+
+SELECT country_name('kn');
+     country_name      
+-----------------------
+ Saint Kitts and Nevis
+(1 row)
+
+SELECT country_name('kp');
+                country_name                 
+---------------------------------------------
+ Korea (the Democratic People's Republic of)
+(1 row)
+
+SELECT country_name('kr');
+      country_name       
+-------------------------
+ Korea (the Republic of)
+(1 row)
+
+SELECT country_name('kw');
+ country_name 
+--------------
+ Kuwait
+(1 row)
+
+SELECT country_name('ky');
+  country_name  
+----------------
+ Cayman Islands
+(1 row)
+
+SELECT country_name('kz');
+ country_name 
+--------------
+ Kazakhstan
+(1 row)
+
+SELECT country_name('la');
+           country_name           
+----------------------------------
+ Lao People's Democratic Republic
+(1 row)
+
+SELECT country_name('lb');
+ country_name 
+--------------
+ Lebanon
+(1 row)
+
+SELECT country_name('lc');
+ country_name 
+--------------
+ Saint Lucia
+(1 row)
+
+SELECT country_name('li');
+ country_name  
+---------------
+ Liechtenstein
+(1 row)
+
+SELECT country_name('lk');
+ country_name 
+--------------
+ Sri Lanka
+(1 row)
+
+SELECT country_name('lr');
+ country_name 
+--------------
+ Liberia
+(1 row)
+
+SELECT country_name('ls');
+ country_name 
+--------------
+ Lesotho
+(1 row)
+
+SELECT country_name('lt');
+ country_name 
+--------------
+ Lithuania
+(1 row)
+
+SELECT country_name('lu');
+ country_name 
+--------------
+ Luxembourg
+(1 row)
+
+SELECT country_name('lv');
+ country_name 
+--------------
+ Latvia
+(1 row)
+
+SELECT country_name('ly');
+ country_name 
+--------------
+ Libya
+(1 row)
+
+SELECT country_name('ma');
+ country_name 
+--------------
+ Morocco
+(1 row)
+
+SELECT country_name('mc');
+ country_name 
+--------------
+ Monaco
+(1 row)
+
+SELECT country_name('md');
+       country_name        
+---------------------------
+ Moldova (the Republic of)
+(1 row)
+
+SELECT country_name('me');
+ country_name 
+--------------
+ Montenegro
+(1 row)
+
+SELECT country_name('mf');
+        country_name        
+----------------------------
+ Saint Martin (French part)
+(1 row)
+
+SELECT country_name('mg');
+ country_name 
+--------------
+ Madagascar
+(1 row)
+
+SELECT country_name('mh');
+   country_name   
+------------------
+ Marshall Islands
+(1 row)
+
+SELECT country_name('mk');
+        country_name         
+-----------------------------
+ Republic of North Macedonia
+(1 row)
+
+SELECT country_name('ml');
+ country_name 
+--------------
+ Mali
+(1 row)
+
+SELECT country_name('mm');
+ country_name 
+--------------
+ Myanmar
+(1 row)
+
+SELECT country_name('mn');
+ country_name 
+--------------
+ Mongolia
+(1 row)
+
+SELECT country_name('mo');
+ country_name 
+--------------
+ Macao
+(1 row)
+
+SELECT country_name('mp');
+       country_name       
+--------------------------
+ Northern Mariana Islands
+(1 row)
+
+SELECT country_name('mq');
+ country_name 
+--------------
+ Martinique
+(1 row)
+
+SELECT country_name('mr');
+ country_name 
+--------------
+ Mauritania
+(1 row)
+
+SELECT country_name('ms');
+ country_name 
+--------------
+ Montserrat
+(1 row)
+
+SELECT country_name('mt');
+ country_name 
+--------------
+ Malta
+(1 row)
+
+SELECT country_name('mu');
+ country_name 
+--------------
+ Mauritius
+(1 row)
+
+SELECT country_name('mv');
+ country_name 
+--------------
+ Maldives
+(1 row)
+
+SELECT country_name('mw');
+ country_name 
+--------------
+ Malawi
+(1 row)
+
+SELECT country_name('mx');
+ country_name 
+--------------
+ Mexico
+(1 row)
+
+SELECT country_name('my');
+ country_name 
+--------------
+ Malaysia
+(1 row)
+
+SELECT country_name('mz');
+ country_name 
+--------------
+ Mozambique
+(1 row)
+
+SELECT country_name('na');
+ country_name 
+--------------
+ Namibia
+(1 row)
+
+SELECT country_name('nc');
+ country_name  
+---------------
+ New Caledonia
+(1 row)
+
+SELECT country_name('ne');
+ country_name 
+--------------
+ Niger
+(1 row)
+
+SELECT country_name('nf');
+  country_name  
+----------------
+ Norfolk Island
+(1 row)
+
+SELECT country_name('ng');
+ country_name 
+--------------
+ Nigeria
+(1 row)
+
+SELECT country_name('ni');
+ country_name 
+--------------
+ Nicaragua
+(1 row)
+
+SELECT country_name('nl');
+ country_name 
+--------------
+ Netherlands
+(1 row)
+
+SELECT country_name('no');
+ country_name 
+--------------
+ Norway
+(1 row)
+
+SELECT country_name('np');
+ country_name 
+--------------
+ Nepal
+(1 row)
+
+SELECT country_name('nr');
+ country_name 
+--------------
+ Nauru
+(1 row)
+
+SELECT country_name('nu');
+ country_name 
+--------------
+ Niue
+(1 row)
+
+SELECT country_name('nz');
+ country_name 
+--------------
+ New Zealand
+(1 row)
+
+SELECT country_name('om');
+ country_name 
+--------------
+ Oman
+(1 row)
+
+SELECT country_name('pa');
+ country_name 
+--------------
+ Panama
+(1 row)
+
+SELECT country_name('pe');
+ country_name 
+--------------
+ Peru
+(1 row)
+
+SELECT country_name('pf');
+   country_name   
+------------------
+ French Polynesia
+(1 row)
+
+SELECT country_name('pg');
+   country_name   
+------------------
+ Papua New Guinea
+(1 row)
+
+SELECT country_name('ph');
+ country_name 
+--------------
+ Philippines
+(1 row)
+
+SELECT country_name('pk');
+ country_name 
+--------------
+ Pakistan
+(1 row)
+
+SELECT country_name('pl');
+ country_name 
+--------------
+ Poland
+(1 row)
+
+SELECT country_name('pm');
+       country_name        
+---------------------------
+ Saint Pierre and Miquelon
+(1 row)
+
+SELECT country_name('pn');
+ country_name 
+--------------
+ Pitcairn
+(1 row)
+
+SELECT country_name('pr');
+ country_name 
+--------------
+ Puerto Rico
+(1 row)
+
+SELECT country_name('ps');
+    country_name     
+---------------------
+ Palestine, State of
+(1 row)
+
+SELECT country_name('pt');
+ country_name 
+--------------
+ Portugal
+(1 row)
+
+SELECT country_name('pw');
+ country_name 
+--------------
+ Palau
+(1 row)
+
+SELECT country_name('py');
+ country_name 
+--------------
+ Paraguay
+(1 row)
+
+SELECT country_name('qa');
+ country_name 
+--------------
+ Qatar
+(1 row)
+
+SELECT country_name('re');
+ country_name 
+--------------
+ Réunion
+(1 row)
+
+SELECT country_name('ro');
+ country_name 
+--------------
+ Romania
+(1 row)
+
+SELECT country_name('rs');
+ country_name 
+--------------
+ Serbia
+(1 row)
+
+SELECT country_name('ru');
+    country_name    
+--------------------
+ Russian Federation
+(1 row)
+
+SELECT country_name('rw');
+ country_name 
+--------------
+ Rwanda
+(1 row)
+
+SELECT country_name('sa');
+ country_name 
+--------------
+ Saudi Arabia
+(1 row)
+
+SELECT country_name('sb');
+  country_name   
+-----------------
+ Solomon Islands
+(1 row)
+
+SELECT country_name('sc');
+ country_name 
+--------------
+ Seychelles
+(1 row)
+
+SELECT country_name('sd');
+ country_name 
+--------------
+ Sudan
+(1 row)
+
+SELECT country_name('se');
+ country_name 
+--------------
+ Sweden
+(1 row)
+
+SELECT country_name('sg');
+ country_name 
+--------------
+ Singapore
+(1 row)
+
+SELECT country_name('sh');
+                 country_name                 
+----------------------------------------------
+ Saint Helena, Ascension and Tristan da Cunha
+(1 row)
+
+SELECT country_name('si');
+ country_name 
+--------------
+ Slovenia
+(1 row)
+
+SELECT country_name('sj');
+      country_name      
+------------------------
+ Svalbard and Jan Mayen
+(1 row)
+
+SELECT country_name('sk');
+ country_name 
+--------------
+ Slovakia
+(1 row)
+
+SELECT country_name('sl');
+ country_name 
+--------------
+ Sierra Leone
+(1 row)
+
+SELECT country_name('sm');
+ country_name 
+--------------
+ San Marino
+(1 row)
+
+SELECT country_name('sn');
+ country_name 
+--------------
+ Senegal
+(1 row)
+
+SELECT country_name('so');
+ country_name 
+--------------
+ Somalia
+(1 row)
+
+SELECT country_name('sr');
+ country_name 
+--------------
+ Suriname
+(1 row)
+
+SELECT country_name('ss');
+ country_name 
+--------------
+ South Sudan
+(1 row)
+
+SELECT country_name('st');
+     country_name      
+-----------------------
+ Sao Tome and Principe
+(1 row)
+
+SELECT country_name('sv');
+ country_name 
+--------------
+ El Salvador
+(1 row)
+
+SELECT country_name('sx');
+       country_name        
+---------------------------
+ Sint Maarten (Dutch part)
+(1 row)
+
+SELECT country_name('sy');
+     country_name     
+----------------------
+ Syrian Arab Republic
+(1 row)
+
+SELECT country_name('sz');
+ country_name 
+--------------
+ Eswatini
+(1 row)
+
+SELECT country_name('tc');
+       country_name       
+--------------------------
+ Turks and Caicos Islands
+(1 row)
+
+SELECT country_name('td');
+ country_name 
+--------------
+ Chad
+(1 row)
+
+SELECT country_name('tf');
+        country_name         
+-----------------------------
+ French Southern Territories
+(1 row)
+
+SELECT country_name('tg');
+ country_name 
+--------------
+ Togo
+(1 row)
+
+SELECT country_name('th');
+ country_name 
+--------------
+ Thailand
+(1 row)
+
+SELECT country_name('tj');
+ country_name 
+--------------
+ Tajikistan
+(1 row)
+
+SELECT country_name('tk');
+ country_name 
+--------------
+ Tokelau
+(1 row)
+
+SELECT country_name('tl');
+ country_name 
+--------------
+ Timor-Leste
+(1 row)
+
+SELECT country_name('tm');
+ country_name 
+--------------
+ Turkmenistan
+(1 row)
+
+SELECT country_name('tn');
+ country_name 
+--------------
+ Tunisia
+(1 row)
+
+SELECT country_name('to');
+ country_name 
+--------------
+ Tonga
+(1 row)
+
+SELECT country_name('tr');
+ country_name 
+--------------
+ Turkey
+(1 row)
+
+SELECT country_name('tt');
+    country_name     
+---------------------
+ Trinidad and Tobago
+(1 row)
+
+SELECT country_name('tv');
+ country_name 
+--------------
+ Tuvalu
+(1 row)
+
+SELECT country_name('tw');
+        country_name        
+----------------------------
+ Taiwan (Province of China)
+(1 row)
+
+SELECT country_name('tz');
+         country_name         
+------------------------------
+ Tanzania, United Republic of
+(1 row)
+
+SELECT country_name('ua');
+ country_name 
+--------------
+ Ukraine
+(1 row)
+
+SELECT country_name('ug');
+ country_name 
+--------------
+ Uganda
+(1 row)
+
+SELECT country_name('uk');
+                     country_name                     
+------------------------------------------------------
+ United Kingdom of Great Britain and Northern Ireland
+(1 row)
+
+SELECT country_name('um');
+             country_name             
+--------------------------------------
+ United States Minor Outlying Islands
+(1 row)
+
+SELECT country_name('us');
+       country_name       
+--------------------------
+ United States of America
+(1 row)
+
+SELECT country_name('uy');
+ country_name 
+--------------
+ Uruguay
+(1 row)
+
+SELECT country_name('uz');
+ country_name 
+--------------
+ Uzbekistan
+(1 row)
+
+SELECT country_name('va');
+ country_name 
+--------------
+ Holy See
+(1 row)
+
+SELECT country_name('vc');
+           country_name           
+----------------------------------
+ Saint Vincent and the Grenadines
+(1 row)
+
+SELECT country_name('ve');
+            country_name            
+------------------------------------
+ Venezuela (Bolivarian Republic of)
+(1 row)
+
+SELECT country_name('vg');
+       country_name       
+--------------------------
+ Virgin Islands (British)
+(1 row)
+
+SELECT country_name('vi');
+     country_name      
+-----------------------
+ Virgin Islands (U.S.)
+(1 row)
+
+SELECT country_name('vn');
+ country_name 
+--------------
+ Viet Nam
+(1 row)
+
+SELECT country_name('vu');
+ country_name 
+--------------
+ Vanuatu
+(1 row)
+
+SELECT country_name('wf');
+   country_name    
+-------------------
+ Wallis and Futuna
+(1 row)
+
+SELECT country_name('ws');
+ country_name 
+--------------
+ Samoa
+(1 row)
+
+SELECT country_name('ye');
+ country_name 
+--------------
+ Yemen
+(1 row)
+
+SELECT country_name('yt');
+ country_name 
+--------------
+ Mayotte
+(1 row)
+
+SELECT country_name('za');
+ country_name 
+--------------
+ South Africa
+(1 row)
+
+SELECT country_name('zm');
+ country_name 
+--------------
+ Zambia
+(1 row)
+
+SELECT country_name('zw');
+ country_name 
+--------------
+ Zimbabwe
+(1 row)
+
+SELECT country_name('zz');
+ country_name 
+--------------
+ Unknown
+(1 row)
+
+ROLLBACK;
