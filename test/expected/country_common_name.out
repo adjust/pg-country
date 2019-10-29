@@ -1,0 +1,105 @@
+BEGIN;
+CREATE EXTENSION country;
+SELECT country_name(NULL),country_common_name(NULL);
+ country_name | country_common_name 
+--------------+---------------------
+              | 
+(1 row)
+
+SELECT country_name('bn'),country_common_name('bn');
+   country_name    | country_common_name 
+-------------------+---------------------
+ Brunei Darussalam | Brunei
+(1 row)
+
+SELECT country_name('bo'),country_common_name('bo');
+           country_name           | country_common_name 
+----------------------------------+---------------------
+ Bolivia (Plurinational State of) | Bolivia
+(1 row)
+
+SELECT country_name('ci'),country_common_name('ci');
+ country_name  | country_common_name 
+---------------+---------------------
+ Côte d'Ivoire | Ivory Coast
+(1 row)
+
+SELECT country_name('fk'),country_common_name('fk');
+           country_name            | country_common_name 
+-----------------------------------+---------------------
+ Falkland Islands (the) [Malvinas] | Falkland Islands
+(1 row)
+
+SELECT country_name('gb'),country_common_name('gb');
+                     country_name                     | country_common_name 
+------------------------------------------------------+---------------------
+ United Kingdom of Great Britain and Northern Ireland | Great Britain
+(1 row)
+
+SELECT country_name('ir'),country_common_name('ir');
+        country_name        | country_common_name 
+----------------------------+---------------------
+ Iran (Islamic Republic of) | Iran
+(1 row)
+
+SELECT country_name('kp'),country_common_name('kp');
+                country_name                 | country_common_name 
+---------------------------------------------+---------------------
+ Korea (the Democratic People's Republic of) | North Korea
+(1 row)
+
+SELECT country_name('kr'),country_common_name('kr');
+      country_name       | country_common_name 
+-------------------------+---------------------
+ Korea (the Republic of) | South Korea
+(1 row)
+
+SELECT country_name('la'),country_common_name('la');
+           country_name           | country_common_name 
+----------------------------------+---------------------
+ Lao People's Democratic Republic | Laos
+(1 row)
+
+SELECT country_name('md'),country_common_name('md');
+       country_name        | country_common_name 
+---------------------------+---------------------
+ Moldova (the Republic of) | Moldova
+(1 row)
+
+SELECT country_name('ru'),country_common_name('ru');
+    country_name    | country_common_name 
+--------------------+---------------------
+ Russian Federation | Russia
+(1 row)
+
+SELECT country_name('sy'),country_common_name('sy');
+     country_name     | country_common_name 
+----------------------+---------------------
+ Syrian Arab Republic | Syria
+(1 row)
+
+SELECT country_name('tw'),country_common_name('tw');
+        country_name        | country_common_name 
+----------------------------+---------------------
+ Taiwan (Province of China) | Taiwan
+(1 row)
+
+SELECT country_name('tz'),country_common_name('tz');
+         country_name         | country_common_name 
+------------------------------+---------------------
+ Tanzania, United Republic of | Tanzania
+(1 row)
+
+SELECT country_name('uk'),country_common_name('uk');
+                     country_name                     | country_common_name 
+------------------------------------------------------+---------------------
+ United Kingdom of Great Britain and Northern Ireland | Great Britain
+(1 row)
+
+SELECT country_name('ve'),country_common_name('ve');
+            country_name            | country_common_name 
+------------------------------------+---------------------
+ Venezuela (Bolivarian Republic of) | Venezuela
+(1 row)
+
+ROLLBACK;
