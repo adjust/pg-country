@@ -6,8 +6,8 @@ PG_MODULE_MAGIC;
 static inline char *
 create_string(const char *chars, size_t sz)
 {
-    char *str = palloc0((sz + 1) * sizeof(char));
-    memcpy(str, chars, (sz + 1) * sizeof(char));
+    char *str = palloc0((sz) * sizeof(char));
+    memcpy(str, chars, (sz) * sizeof(char));
     return str;
 }
 
