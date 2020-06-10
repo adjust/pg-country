@@ -1,4 +1,4 @@
-
+-- require country
 DO $$
 DECLARE version_num integer;
 BEGIN
