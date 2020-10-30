@@ -1,5 +1,5 @@
 # country extension
 comment = 'my awesome extension'
-default_version = '0.0.3'
+default_version = '0.0.4'
 relocatable = true
 requires = ''
