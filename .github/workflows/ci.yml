@@ -19,5 +19,4 @@ jobs:
       - run: pg-setup ${{ matrix.pg }}
       - uses: actions/checkout@v2
       - run: build-check
-      - run: ls -a
       - run: update-check

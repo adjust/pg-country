@@ -166,3 +166,5 @@ DEFAULT FOR TYPE country USING hash
 AS
   OPERATOR        1       = ,
   FUNCTION        1       hash_country(country);
+
+create table abc(a int);
