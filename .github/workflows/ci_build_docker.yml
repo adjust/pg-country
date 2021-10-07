@@ -1,0 +1,26 @@
+name: CI_build_docker
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: ['*']
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        pg: [14]
+    name: PostgreSQL ${{ matrix.pg }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Clone pg-ext-docker
+        uses: actions/checkout@v2
+        with:
+          repository: adjust/pg-ext-docker
+          path: pg-ext-docker
+      - run: cp run_tests.sh pg-ext-docker/bin/
+      - run: docker build --tag pg-ext-docker --build-arg="PG_VERSION=${{ matrix.pg }}" pg-ext-docker
+      - run: docker run --mount "type=bind,src=$(pwd),dst=/repo" --rm pg-ext-docker:latest run_tests.sh
