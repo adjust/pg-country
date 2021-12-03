@@ -253,6 +253,7 @@ SELECT 'yt'::country;
 SELECT 'za'::country;
 SELECT 'zm'::country;
 SELECT 'zw'::country;
+SELECT 'xk'::country;
 SELECT 'zz'::country;
 ROLLBACK;
 BEGIN;

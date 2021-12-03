@@ -1508,6 +1508,12 @@ SELECT 'zw'::country;
  zw
 (1 row)
 
+SELECT 'xk'::country;
+ country 
+---------
+ xk
+(1 row)
+
 SELECT 'zz'::country;
  country 
 ---------

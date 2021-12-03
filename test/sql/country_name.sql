@@ -251,5 +251,6 @@ SELECT country_name('yt');
 SELECT country_name('za');
 SELECT country_name('zm');
 SELECT country_name('zw');
+SELECT country_name('xk');
 SELECT country_name('zz');
 ROLLBACK;

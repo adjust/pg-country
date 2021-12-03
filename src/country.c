@@ -269,6 +269,7 @@ country_from_str(const char *str)
         case ZA: return 248;
         case ZM: return 249;
         case ZW: return 250;
+        case XK: return 251;
         case ZZ: return 255;
         default: elog(ERROR, "invalid country input string %s", str);
     }
@@ -529,6 +530,7 @@ country_to_str(country c)
         case 248: return create_string(CONST_STRING("za"));
         case 249: return create_string(CONST_STRING("zm"));
         case 250: return create_string(CONST_STRING("zw"));
+        case 251: return create_string(CONST_STRING("xk"));
         case 255: return create_string(CONST_STRING("zz"));
         default: elog(ERROR, "unknown output country");
     }
@@ -789,6 +791,7 @@ country_to_name(country c)
         case 248: return cstring_to_text_with_len(CONST_STRING("South Africa"));
         case 249: return cstring_to_text_with_len(CONST_STRING("Zambia"));
         case 250: return cstring_to_text_with_len(CONST_STRING("Zimbabwe"));
+        case 251: return cstring_to_text_with_len(CONST_STRING("Kosovo"));
         case 255: return cstring_to_text_with_len(CONST_STRING("Unknown"));
         default: elog(ERROR, "unknown output country");
     }

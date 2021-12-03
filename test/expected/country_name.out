@@ -1506,6 +1506,12 @@ SELECT country_name('zw');
  Zimbabwe
 (1 row)
 
+SELECT country_name('xk');
+ country_name 
+--------------
+ Kosovo
+(1 row)
+
 SELECT country_name('zz');
  country_name 
 --------------

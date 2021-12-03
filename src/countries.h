@@ -248,4 +248,5 @@
 #define ZA 'z' << 0 | 'a' << 8
 #define ZM 'z' << 0 | 'm' << 8
 #define ZW 'z' << 0 | 'w' << 8
+#define XK 'x' << 0 | 'k' << 8
 #define ZZ 'z' << 0 | 'z' << 8
