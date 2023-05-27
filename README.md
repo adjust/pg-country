@@ -1,7 +1,7 @@
 [![CI](https://github.com/adjust/pg-country/actions/workflows/main.yml/badge.svg)](https://github.com/adjust/pg-country/actions/workflows/main.yml)
 
 # country
-An Extension for PostgreSQL.
+A country Extension for PostgreSQL.
 
 ## Installation from source codes
 
