@@ -31,6 +31,10 @@ describe 'country_pass' do
     ]
   end
 
+  it 'should allow NULL country' do
+    query("SELECT NULL::country").should match nil
+  end
+
   it 'should pass valid countries' do
     valid_countries.each do |name|
       query("SELECT '#{name}'::country").should match name

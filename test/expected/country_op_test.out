@@ -1,6 +1,6 @@
-BEGIN;
 -- os_name_op should implement gt;
 -- ./spec/country_op_spec.rb:8;
+BEGIN;
 CREATE EXTENSION country;
 SELECT 'uk'::country > 'de'::country;
  ?column? 
@@ -27,9 +27,9 @@ SELECT NOT('uk'::country <= 'de'::country);
 (1 row)
 
 ROLLBACK;
-BEGIN;
 -- os_name_op should implement lt;
 -- ./spec/country_op_spec.rb:15;
+BEGIN;
 CREATE EXTENSION country;
 SELECT 'uk'::country > 'de'::country;
  ?column? 
@@ -56,9 +56,9 @@ SELECT NOT('uk'::country <= 'de'::country);
 (1 row)
 
 ROLLBACK;
-BEGIN;
 -- os_name_op should implement eq;
 -- ./spec/country_op_spec.rb:22;
+BEGIN;
 CREATE EXTENSION country;
 SELECT NOT('de'::country = 'uk'::country);
  ?column? 
@@ -73,9 +73,9 @@ SELECT 'uk'::country = 'uk'::country;
 (1 row)
 
 ROLLBACK;
-BEGIN;
 -- os_name_op should implement neq;
 -- ./spec/country_op_spec.rb:27;
+BEGIN;
 CREATE EXTENSION country;
 SELECT 'de'::country != 'uk'::country;
  ?column? 
