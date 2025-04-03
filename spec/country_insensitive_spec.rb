@@ -7,7 +7,7 @@ describe 'country' do
 
   it 'should be case insensitive' do
     %w(de De dE DE dE).product(%w(de De dE DE dE)).each do |comb|
-      query("SELECT '#{comb[0]}'::country = '#{comb[1]}'::country").should match 't'
+      query("SELECT '#{comb[0]}'::country = '#{comb[1]}'::country").should match true
     end
   end
 end
