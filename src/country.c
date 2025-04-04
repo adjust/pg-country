@@ -866,3 +866,37 @@ Datum country_common_name(PG_FUNCTION_ARGS)
     country c = PG_GETARG_UINT8(0);
     PG_RETURN_TEXT_P(country_to_common_name(c));
 }
+
+PG_FUNCTION_INFO_V1(int4_to_country);
+Datum int4_to_country(PG_FUNCTION_ARGS)
+{
+    country c = PG_GETARG_INT32(0);
+
+    /* XXX we do not check input validity for performance reasons */
+    PG_RETURN_UINT8(c);
+}
+
+PG_FUNCTION_INFO_V1(country_to_int4);
+Datum country_to_int4(PG_FUNCTION_ARGS)
+{
+    country c = PG_GETARG_UINT8(0);
+
+    PG_RETURN_INT32(c);
+}
+
+PG_FUNCTION_INFO_V1(int2_to_country);
+Datum int2_to_country(PG_FUNCTION_ARGS)
+{
+    country c = PG_GETARG_INT16(0);
+
+    /* XXX we do not check input validity for performance reasons */
+    PG_RETURN_UINT8(c);
+}
+
+PG_FUNCTION_INFO_V1(country_to_int2);
+Datum country_to_int2(PG_FUNCTION_ARGS)
+{
+    country c = PG_GETARG_UINT8(0);
+
+    PG_RETURN_INT16(c);
+}

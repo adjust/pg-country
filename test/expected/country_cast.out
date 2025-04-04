@@ -1,0 +1,27 @@
+BEGIN;
+CREATE EXTENSION country;
+SELECT 'de'::country::int4;
+ int4 
+------
+   57
+(1 row)
+
+SELECT 'de'::country::int2;
+ int2 
+------
+   57
+(1 row)
+
+SELECT 57::int4::country;
+ country 
+---------
+ de
+(1 row)
+
+SELECT 57::int2::country;
+ country 
+---------
+ de
+(1 row)
+
+ROLLBACK;
